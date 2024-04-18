@@ -112,11 +112,9 @@ const MyPage = () => {
       </section>
       <section>
         {userInfo[0].user_type === "general user" && <MyPageTab />}
-        <div className="w-[390px]">
-          {userInfo[0].user_type === "hospital staff" && (
-            <AdminMenu hospitalName={hospitalName} />
-          )}
-        </div>
+        {userInfo[0].user_type === "hospital staff" && (
+          <AdminMenu hospitalName={hospitalName} />
+        )}
         {userInfo[0].user_type === "developer" && <AccessDenied />}
       </section>
     </section>
